@@ -43,6 +43,8 @@ async function sendRegistrationEmail(userEmail, name) {
   const text = `Hello ${name}, \n\nThank you for registering at ValutCore.
     We're excited to have you on board!\n\nBest regards, \nThe ValutCore Team`;
   const html = `<p>Hello ${name}, </p><p>Thank you for registering at ValutCore. We're excited to have you on board !< /p><p>Best regards,<br>The ValutCore Team</p>`;
+
+  await sendEmail(userEmail, subject, text, html);
 }
 
 module.exports ={
