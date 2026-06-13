@@ -10,7 +10,7 @@ const ledgerSchema = new mongoose.Schema({
     },
     amount: {
         type: Number,
-        required: [true, "Amount musg be required for creating a ledger entry"],
+        required: [true, "Amount is required for creating a ledger entry"],
         immutable: true
     },
     transaction: {
@@ -26,7 +26,7 @@ const ledgerSchema = new mongoose.Schema({
             values: ["CREDIT", "DEBIT"],
             message: "Type can be either CREDIT or DEBIT"
         },
-        required: [true, "LEdger type is required"],
+        required: [true, "Ledger type is required"],
         immutable: true
     }
 })
